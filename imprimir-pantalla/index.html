@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head> </head>
+
+	<body>
+		<style>
+			h1 {
+				color: red;
+			}
+
+			p {
+				padding: 18px;
+				background-color: green;
+			}
+		</style>
+		<p id="parrafo">
+			Hola, soy un párrafo. También puedo ser <strong>impreso</strong> <br />
+			Olvidé decir que también puedo contener imágenes :)
+			<br />
+			<img
+				src="https://d1q6f0aelx0por.cloudfront.net/product-logos/81630ec2-d253-4eb2-b36c-eb54072cb8d6-golang.png"
+			/>
+		</p>
+		<button id="btnImprimirParrafo">Imprimir párrafo</button>
+		<div id="imprimible">
+			Hola, yo soy otro div con el id imprimible
+			<br />
+			Puedo llevar <br />saltos de línea <br />
+			También
+			<ul>
+				<li>Elementos</li>
+				<li>de una</li>
+				<li>Lista</li>
+			</ul>
+			<h1>Encabezados</h1>
+			<h2>De todos</h2>
+			<h3>Los tamaños</h3>
+			<p>Y <strong>todo</strong> lo que pueda ser <i>creado</i> usando <code>html</code></p>
+		</div>
+		<button id="btnImprimirDiv">Imprimir div</button>
+		<iframe id="iframe" name="printf"> adsfa</iframe>
+
+		<script>
+			function imprimirElemento(elemento) {
+				//window.frames['printf'].focus();
+				//window.frames['printf'].contentWindow.print();
+				//var iframePrint = document.createElement('iframe');
+				var iframePrint = document.getElementById('iframe');
+
+				iframePrint.src = 'data:text/html;charset=utf-8,' + elemento.innerHTML;
+
+				iframePrint.focus();
+
+				var ifC = iframePrint.contentWindow;
+
+				console.log(ifC);
+				//iframePrint.contentWindow.write(elemento.innerHTML);
+
+				ifC.onload = function () {
+					ifC.print();
+					ifC.close();
+				};
+
+			
+			}
+
+			document.querySelector('#btnImprimirDiv').addEventListener('click', function () {
+				var div = document.querySelector('#imprimible');
+				imprimirElemento(div);
+			});
+
+			document.querySelector('#btnImprimirParrafo').addEventListener('click', function () {
+				var parrafo = document.querySelector('#parrafo');
+				imprimirElemento(parrafo);
+			});
+
+			window.onload = function () {
+				var parrafo = document.querySelector('#parrafo');
+				imprimirElemento(parrafo);
+			};
+		</script>
+	</body>
+</html>
