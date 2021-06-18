@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>La Chimba Hpta</title>
+	</head>
+
+	<body>
+		<h1>Los berracos</h1>
+
+		<script>
+			var infoNizo = {
+				age: 24,
+				name: 'Sebastián Guarnizo Obando',
+				hasPracticed: true,
+				hasPracticedMessage: null,
+			};
+
+			var infoJuanma = {
+				age: 24,
+				name: 'Juan Manuel Valencia López',
+				hasPracticed: false,
+				hasPracticedMessage: null,
+			};
+			var infoCharry = {
+				age: 25,
+				name: 'Agustín Charry Osorio',
+				hasPracticed: false,
+				hasPracticedMessage: null,
+			};
+            var infoJuana = {
+				age: 28,
+				name: 'Juanita Aranzazu',
+				hasPracticed: false,
+				hasPracticedMessage: null,
+			};
+
+			var myPlayers = [infoNizo, infoJuanma, infoCharry, infoJuana]; // LLamado a una base de datos
+
+			// i = 0
+			// i menor a la longitud de mi arreglo
+			for (var i = 0; i < myPlayers.length; i++) {
+                var tempPlayer = myPlayers[i];
+				if (tempPlayer['hasPracticed'] == true) {
+					tempPlayer['hasPracticedMessage'] = 'Ha jugado';
+				} else {
+					tempPlayer['hasPracticedMessage'] = 'No ha jugado';
+				}
+			    console.log(tempPlayer);
+			}
+
+            // Buenas prácticas DRY Dont repeat yourself
+			
+
+		</script>
+	</body>
+</html>
