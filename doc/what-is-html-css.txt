@@ -1,0 +1,9 @@
+<<<<<<< HEAD
+What is Html?
+
+HTML for HyperText Markup Language ('hypertext markup language')
+=======
+CSS
+
+CSS is a language that lets you to define styles for components into a HTML page.
+>>>>>>> 1461c76cdd3287aaf02811028e084d586446243b
