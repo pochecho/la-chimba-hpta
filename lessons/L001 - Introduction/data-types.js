@@ -81,12 +81,28 @@ genderString = "";
 // "true" == true -> Verdadero Solo valida datos
 // "true" === true -> Falso Valida datos y el tipo
 
+language = "es";
+
+/* Available languages
+    esperanto = est
+    español = es
+    inglés = en
+*/
+
 if (gender === true) {
   //Afirmative
-  genderString = "Masculino";
+  if (language === "en") {
+    genderString = "Man";
+  } else {
+    genderString = "Masculino";
+  }
 } else {
   //Negative
-  genderString = "Femenino";
+  if (language === "en") {
+    genderString = "Woman";
+  } else {
+    genderString = "Femenino";
+  }
 }
 
 console.log(name, genderString, age, address);
