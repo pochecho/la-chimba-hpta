@@ -81,7 +81,7 @@ genderString = "";
 // "true" == true -> Verdadero Solo valida datos
 // "true" === true -> Falso Valida datos y el tipo
 
-language = "es";
+language = "est";
 
 /* Available languages
     esperanto = est
@@ -94,14 +94,22 @@ if (gender === true) {
   if (language === "en") {
     genderString = "Man";
   } else {
-    genderString = "Masculino";
+    if (language === "es") {
+      genderString = "Masculino";
+    } else {
+      genderString = "viro";
+    }
   }
 } else {
   //Negative
   if (language === "en") {
     genderString = "Woman";
   } else {
-    genderString = "Femenino";
+    if (language === "es") {
+      genderString = "Femenino";
+    } else {
+      genderString = "virino";
+    }
   }
 }
 
