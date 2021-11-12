@@ -21,5 +21,48 @@ Scope
 Comparaciones
 
 */
+
+
 const population = [120000, 5645566,65465465,45646546,64874588,8514465];
 const ages = [12,56,4,12,45,78,63,5,35];
+
+// if (population > 120000){
+//     for(let j = 0; j < population.length; j++)
+//     console.log(population);
+// }else {
+//     (population <= 120000)
+//     for(let j = 0; j < population; j++)
+//     console.log(population);
+// }
+
+// for(let i = 0; i < population.length; i++){
+//     if(population[i] > 120000){
+//         console.log(population[i]);
+//     }
+// }
+// for(let j = 0; j < ages.length; j++){
+//     if(ages[j] > 18){
+//         console.log(ages[j]);
+//     }
+// }
+
+function printByCondition(objects, l){
+    // console.log(objects.length, l);
+    for(let k = 0; k < objects.length; k++){
+        if(objects[k] > l){
+            console.log(objects[k]);
+         }
+    }
+}
+printByCondition(population, 120000);
+printByCondition(ages, 18);
+
+
+
+
+
+
+
+
+
+
